@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "MBSwift"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.4"
   spec.summary      = "Mbicycle development company pod"
   spec.description  = "Using for adding some extensions such as binding"
   spec.homepage     = "https://github.com/Sivagins/MBSwift"
