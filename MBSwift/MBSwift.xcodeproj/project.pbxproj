@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		5270FB6922E32B8E002D1D4B /* MBSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 5270FB6722E32B8E002D1D4B /* MBSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5270FB7322E3516B002D1D4B /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270FB7222E3516B002D1D4B /* AlertBuilder.swift */; };
+		5270FB7622E351ED002D1D4B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270FB7522E351ED002D1D4B /* Observable.swift */; };
+		5270FB7822E35225002D1D4B /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270FB7722E35225002D1D4B /* Observer.swift */; };
+		5270FB7A22E35241002D1D4B /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270FB7922E35241002D1D4B /* Disposable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5270FB6422E32B8E002D1D4B /* MBSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5270FB6722E32B8E002D1D4B /* MBSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBSwift.h; sourceTree = "<group>"; };
 		5270FB6822E32B8E002D1D4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5270FB7222E3516B002D1D4B /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
+		5270FB7522E351ED002D1D4B /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		5270FB7722E35225002D1D4B /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		5270FB7922E35241002D1D4B /* Disposable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +54,38 @@
 		5270FB6622E32B8E002D1D4B /* MBSwift */ = {
 			isa = PBXGroup;
 			children = (
+				5270FB7022E35123002D1D4B /* Extensions */,
+				5270FB6F22E35119002D1D4B /* Observing */,
 				5270FB6722E32B8E002D1D4B /* MBSwift.h */,
 				5270FB6822E32B8E002D1D4B /* Info.plist */,
 			);
 			path = MBSwift;
+			sourceTree = "<group>";
+		};
+		5270FB6F22E35119002D1D4B /* Observing */ = {
+			isa = PBXGroup;
+			children = (
+				5270FB7522E351ED002D1D4B /* Observable.swift */,
+				5270FB7722E35225002D1D4B /* Observer.swift */,
+				5270FB7922E35241002D1D4B /* Disposable.swift */,
+			);
+			path = Observing;
+			sourceTree = "<group>";
+		};
+		5270FB7022E35123002D1D4B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5270FB7122E35127002D1D4B /* AlertBuilder */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5270FB7122E35127002D1D4B /* AlertBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				5270FB7222E3516B002D1D4B /* AlertBuilder.swift */,
+			);
+			path = AlertBuilder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +131,7 @@
 				TargetAttributes = {
 					5270FB6322E32B8E002D1D4B = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -130,6 +167,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5270FB7622E351ED002D1D4B /* Observable.swift in Sources */,
+				5270FB7822E35225002D1D4B /* Observer.swift in Sources */,
+				5270FB7322E3516B002D1D4B /* AlertBuilder.swift in Sources */,
+				5270FB7A22E35241002D1D4B /* Disposable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +302,7 @@
 		5270FB6D22E32B8E002D1D4B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -278,6 +320,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mbicycle.MBSwift;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,6 +329,7 @@
 		5270FB6E22E32B8E002D1D4B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
