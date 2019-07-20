@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DialogBuilder {
+public class DialogBuilder {
     
     private let dialog: UIAlertController!
     

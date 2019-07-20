@@ -10,7 +10,7 @@ import Foundation
 
 typealias OnValueChanged<T> = ((_ newValue: T, _ oldValue: T?) -> Void)
 
-class ImmutableObservable<T> {
+public class ImmutableObservable<T> {
     
     private var observers = [String: Observer<T>]()
     
@@ -56,7 +56,7 @@ class ImmutableObservable<T> {
     }
 }
 
-class Observable<T>: ImmutableObservable<T> {
+public class Observable<T>: ImmutableObservable<T> {
     
     override var value: T {
         get {

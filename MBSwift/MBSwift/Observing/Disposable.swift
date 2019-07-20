@@ -10,7 +10,7 @@ import Foundation
 
 typealias Dispose = (() -> Void)
 
-class Disposable {
+public class Disposable {
     
     let dispose: Dispose
     
