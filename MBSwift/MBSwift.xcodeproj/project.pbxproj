@@ -59,6 +59,7 @@
 				5270FB7B22E441E2002D1D4B /* CustomViews */,
 				5270FB7022E35123002D1D4B /* Extensions */,
 				5270FB6F22E35119002D1D4B /* Observing */,
+				7DF72BCA22E5D36F00FC8D79 /* Utils */,
 				5270FB6722E32B8E002D1D4B /* MBSwift.h */,
 				5270FB6822E32B8E002D1D4B /* Info.plist */,
 			);
@@ -78,7 +79,6 @@
 		5270FB7022E35123002D1D4B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				5270FB7122E35127002D1D4B /* AlertBuilder */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -105,6 +105,14 @@
 				5270FB7D22E4423E002D1D4B /* PaginationTableView.swift */,
 			);
 			path = UITableView;
+			sourceTree = "<group>";
+		};
+		7DF72BCA22E5D36F00FC8D79 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5270FB7122E35127002D1D4B /* AlertBuilder */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
