@@ -8,31 +8,31 @@
 
 import Foundation
 
-public class DialogBuilder {
+public class AlertBuilder {
     
     private let dialog: UIAlertController!
     
-    init(style: UIAlertController.Style) {
-        dialog = UIAlertController(title: nil, message: nil, preferredStyle: style)
+    init(title: String? = nil, message: String? = nil, style: UIAlertController.Style) {
+        dialog = UIAlertController(title: title, message: message, preferredStyle: style)
     }
     
-    func setTitle(_ title: String) -> DialogBuilder {
+    func setTitle(_ title: String) -> AlertBuilder {
         dialog.title = title
         return self
     }
     
-    func setMessage(_ message: String) -> DialogBuilder {
+    func setMessage(_ message: String) -> AlertBuilder {
         dialog.message = message
         return self
     }
     
-    func addAction(_ name: String, completion: ((UIAlertAction) -> Void)?, style: UIAlertAction.Style = .default) -> DialogBuilder {
+    func addAction(_ name: String, completion: ((UIAlertAction) -> Void)?, style: UIAlertAction.Style = .default) -> AlertBuilder {
         let action = UIAlertAction(title: name, style: style, handler: completion)
         dialog.addAction(action)
         return self
     }
     
-    func addField(_ placeholder: String) -> DialogBuilder {
+    func addField(_ placeholder: String) -> AlertBuilder {
         dialog.addTextField { textField in
             textField.placeholder = placeholder
         }

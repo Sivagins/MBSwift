@@ -12,6 +12,7 @@
 		5270FB7622E351ED002D1D4B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270FB7522E351ED002D1D4B /* Observable.swift */; };
 		5270FB7822E35225002D1D4B /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270FB7722E35225002D1D4B /* Observer.swift */; };
 		5270FB7A22E35241002D1D4B /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270FB7922E35241002D1D4B /* Disposable.swift */; };
+		5270FB7E22E4423E002D1D4B /* PaginationTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270FB7D22E4423E002D1D4B /* PaginationTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		5270FB7522E351ED002D1D4B /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		5270FB7722E35225002D1D4B /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		5270FB7922E35241002D1D4B /* Disposable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
+		5270FB7D22E4423E002D1D4B /* PaginationTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		5270FB6622E32B8E002D1D4B /* MBSwift */ = {
 			isa = PBXGroup;
 			children = (
+				5270FB7B22E441E2002D1D4B /* CustomViews */,
 				5270FB7022E35123002D1D4B /* Extensions */,
 				5270FB6F22E35119002D1D4B /* Observing */,
 				5270FB6722E32B8E002D1D4B /* MBSwift.h */,
@@ -86,6 +89,22 @@
 				5270FB7222E3516B002D1D4B /* AlertBuilder.swift */,
 			);
 			path = AlertBuilder;
+			sourceTree = "<group>";
+		};
+		5270FB7B22E441E2002D1D4B /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				5270FB7C22E441FC002D1D4B /* UITableView */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		5270FB7C22E441FC002D1D4B /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				5270FB7D22E4423E002D1D4B /* PaginationTableView.swift */,
+			);
+			path = UITableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5270FB7622E351ED002D1D4B /* Observable.swift in Sources */,
+				5270FB7E22E4423E002D1D4B /* PaginationTableView.swift in Sources */,
 				5270FB7822E35225002D1D4B /* Observer.swift in Sources */,
 				5270FB7322E3516B002D1D4B /* AlertBuilder.swift in Sources */,
 				5270FB7A22E35241002D1D4B /* Disposable.swift in Sources */,
