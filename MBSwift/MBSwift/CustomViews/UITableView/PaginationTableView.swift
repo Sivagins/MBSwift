@@ -17,7 +17,7 @@ class PaginationTableView: UITableView {
     var paginatinType: TableViewPaginationType = .bottom
     var paginationAction: (() -> Void)?
     var isPaginationEnabled: Bool = true
-    var ratio: CGFloat = 0.7
+    var ratio: CGFloat = 0.5
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -30,14 +30,17 @@ class PaginationTableView: UITableView {
     }
     
     private func refreshIfNeeded(_ offsetY: CGFloat) {
+        let breakpoint = contentSize.height - offsetY
+        if contentSize.height <= frame.height {
+            return
+        }
+        let refreshPoint = (contentSize.height * ratio)
         if paginatinType == .bottom {
-            let breakpoint = contentSize.height - offsetY
-            if (contentSize.height * ratio) > breakpoint {
+            if refreshPoint < breakpoint {
                 paginationAction?()
             }
         } else {
-            let breakpoint = contentSize.height - offsetY
-            if (contentSize.height * (1 - ratio)) > breakpoint {
+            if refreshPoint > breakpoint {
                 paginationAction?()
             }
         }
