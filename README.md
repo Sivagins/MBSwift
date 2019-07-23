@@ -19,3 +19,17 @@ value.observe(queue: .main) { oldValue, newValue in
   print(String(format: "%@ change name to %@.", oldValue, newName))
 }
 ```
+
+## Using of Animation Group
+
+```
+let errorAnimationTask = AnimationGroupTask(duration: 0.25, delay: 0, options: .curveLinear) {
+  // ...
+}
+let separatorMovingAnimationTask = AnimationGroupTask(duration: 0.7) {
+  // ...
+}
+UIView.animate(onCompleted: {
+  print("Animations ended!")
+}, tasks: errorAnimationTask, separatorMovingAnimationTask)
+```
